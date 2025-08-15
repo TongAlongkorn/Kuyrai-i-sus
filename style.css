@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: sans-serif;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to bottom, rgb(0, 255, 0) 50%, #f6f67a 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* กล่องข้อความ */
+.message-box {
+    background-color: pink;
+    padding: 40px 80px; /* ลดลงจาก 300px เพื่อให้พอดีข้อความ */
+    border-radius: 50px;
+    border: 4px solid lawngreen; /* กรอบ */
+    font-size: 1.8rem;
+    box-shadow: 0px 5px 0px #ff99bb;
+    cursor: pointer;
+    z-index: 2;
+    text-decoration: none;
+    color: purple;
+    transition: transform 0.2s;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* เอฟเฟกต์เด้งเมื่อ hover */
+.message-box:hover {
+    animation: bounce 0.5s;
+}
+
+@keyframes bounce {
+    0%   { transform: scale(1); }
+    30%  { transform: scale(1.1); }
+    50%  { transform: scale(0.9); }
+    70%  { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* รูปภาพใหญ่ขึ้น + กรอบ */
+.troll-img {
+    position: absolute;
+    width: 250px;
+    animation: trollMove 1s infinite;
+    border: 4px solid rgb(222, 12, 12); /* กรอบสีเขียว */
+    border-radius: 20px; /* ทำให้ขอบโค้ง */
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.3); /* เงาให้เด่น */
+}
+
+/* เอฟเฟกต์กวนๆ */
+@keyframes trollMove {
+    0% { transform: translate(0,0) rotate(0deg); }
+    20% { transform: translate(7px,-7px) rotate(2deg); }
+    40% { transform: translate(-7px,7px) rotate(-2deg); }
+    60% { transform: translate(7px,7px) rotate(1deg); }
+    80% { transform: translate(-7px,-7px) rotate(-1deg); }
+    100% { transform: translate(0,0) rotate(0deg); }
+}
+
+/* ตำแหน่งภาพ */
+/* ตำแหน่งภาพใกล้ขึ้น */
+.img-top {
+    top: 50px; /* เดิม 20px เพิ่มให้ลงมาใกล้ปุ่ม */
+}
+
+.img-left {
+    bottom: 60px; /* เดิม 20px ลดลงมาใกล้ปุ่ม */
+    left: 60px;   /* เดิม 20px */
+}
+
+.img-right {
+    bottom: 60px; /* เดิม 20px */
+    right: 60px;  /* เดิม 20px */
+}
