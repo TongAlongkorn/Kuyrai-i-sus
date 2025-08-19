@@ -96,7 +96,7 @@ body, html {
 }
 
 /* สำหรับมือถือเล็กมาก */
-@media (max-width:300px) {
+@media (max-width:40px) {
     .message-box {
         padding: 15px 30px;
         font-size: 1rem;
@@ -105,3 +105,4 @@ body, html {
         max-width: 50vw;
     }
 }
+
